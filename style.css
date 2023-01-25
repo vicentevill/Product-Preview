@@ -1,0 +1,130 @@
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+html *{
+    /* background: rgba(238, 130, 238, 0.322);
+    outline: 2px dotted black; */
+    margin: 0;
+}
+
+html{
+    background: #f3eae3;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif; 
+
+}
+
+main{
+    display: flex;
+    max-width: 600px;
+    height: fit-content;
+    align-items: center;
+    color: #7f818d;
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+}
+
+#previewIMG{
+    width: 50%;
+}
+
+#previewInfo{
+    width: 50%;
+    display: grid;
+    grid-template-areas: 
+    "category category"
+    "productName productName"
+    "productDescription productDescription"
+    "newPrice oldPrice"
+    "addToCart addToCart"
+    ;
+    padding:0 30px 0 30px;
+    row-gap: 30px;
+}
+
+#category{
+    grid-area: category;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#productName{
+    grid-area: productName;
+    font-family: 'Fraunces', serif;
+    color: #1c2329;
+}
+
+#productDescription{
+    grid-area: productDescription;
+}
+
+#newPrice{
+    grid-area: newPrice;
+    font-family: 'Fraunces', serif;
+    color: #398267;
+    font-size: 28px;
+    width: fit-content;
+}
+
+#oldPrice{
+    grid-area: oldPrice;
+    display: flex;
+    align-items: center;
+    text-decoration: line-through;
+    font-size: 14px;
+    padding-right: 60px;
+}
+
+#addToCart{
+    grid-area: addToCart;
+    border: 0;
+    background-color: #398267;
+    color: white;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    border-radius: 7px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    main{
+        flex-direction: column;
+        max-width: 350px;
+        gap: 30px;
+        padding: 0 0 30px 0;
+    }
+
+    #previewIMG{
+        content: url(images/image-product-mobile.jpg);
+        width: 100%;
+    }
+
+    #previewInfo{
+        width: 85%;
+        row-gap: 20px;
+    }
+
+    #productName{
+        width: 250px;
+    }
+    
+    #oldPrice{
+        padding-right: 100px;
+    }
+
+    #addToCart:hover{
+        background: #1b3f31;
+    }
+}
